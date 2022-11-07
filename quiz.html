@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links css -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/quiz.css">
+
+
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Icon da aba -->
+  <link rel="sortcut icon" href="img/JE.png" type="image/png" />
+
+  <!-- Título -->
+  <title>Urnal</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-white sticky-top navbar-expand-lg  shadow-sm p-2 px-5">
+    <a href="index.html" class="navbar-brand">
+      <img src="img/JE.png" class="img-fluid" width="40">
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav id="nav-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </nav>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active ml-auto">
+          <a href="index.html" class="nav-link text-warning font-weight-bold">Home</a>
+        </li>
+
+        <li class="nav-item pl-lg-4 ml-auto">
+          <a href="grafic.html" class="nav-link font-weight-bold text-warning">Gráficos</a>
+        </li>
+
+        <li class="nav-item pl-lg-4 ml-auto">
+          <a href="game.html" class="nav-link font-weight-bold text-warning">Jogo da Memória</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <div class="row featurette mt-5">
+
+    <div class="col-md-7">
+      <h4 class="featurette-heading ml-5">No Brasil, a urna eletrônica (denominada originalmente coletor eletrônico de
+        voto) foi implantada em 1996. Acabou com várias das antigas fraudes externas da votação em papel (como o
+        "voto carneirinho", "voto formiguinha", ou votos de protesto realizados em favor de conhecidos animais como o
+        Macaco Tião e a Rinoceronte Cacareco). Apesar de controvérsias sobre seu nível de segurança e a impressão dos
+        votos (ver abaixo), o sistema passa por auditorias antes e depois das eleições e é testado contra hackers
+        periodicamente pelo Tribunal Superior Eleitoral (TSE) e organizações convidadas, sendo que nunca foi
+        corrompido.
+      </h4>
+
+    </div>
+
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"
+        src="img/urna.png">
+    </div>
+
+  </div>
+
+
+  <div class="row featurette mt-5">
+
+    <div class="col-md-7">
+      <h4 class="featurette-heading ml-5">A urna eletrônica registra os votos por meio de um display de cédula eleitoral
+        aliado a componentes mecânicos ou eletro-ópticos que podem ser ativados pelo eleitor (tipicamente botões ou uma
+        tela tátil), processando, assim, os dados por meio de um programa de computador e registrando-os em componentes
+        de memória. O processo ocorre localmente sem conexão à Internet.
+      </h4>
+
+      <h4 class="featurette-heading ml-5">Ela é composta por dois módulos: o "terminal do eleitor" e o "terminal do
+        mesário". No terminal da mesa receptora, o mesário digita no teclado o número do título do eleitor para
+        verificar se sua situação está regular e ele pode votar. Desde 2010 esse terminal possui um leitor de
+        biometria. Já o terminal do eleitor é a urna propriamente dita, ou seja, é onde o eleitor digita o seu voto.
+      </h4>
+
+      <h4 class="featurette-heading ml-5">Após a eleição, a urna produz uma tabulação dos dados de voto armazenados em
+        um componente de memória removível com uma cópia impressa. O sistema também pode fornecer um meio para
+        transmitir boletins de voto individuais ou totais de votos para um local central para consolidar e relatar os
+        resultados regionais. O dispositivo começou a ser utilizado massivamente a partir das eleições municipais de
+        1996, em 57 cidades do Brasil.
+      </h4>
+
+    </div>
+
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"
+        src="img/home.png">
+    </div>
+
+  </div>
+
+  <hr class="featurette-divider">
+
+
+  <!-- Quiz -->
+  <!-- ===================================================== -->
+  <div class="conteudo" id="quiz">
+
+    <div class="caixa">
+
+      <div class="cabecalho">
+        <span>Pontuação: <span id="pontuacao">0</span></span>
+        <span id="contador"></span>
+      </div>
+
+      <div class="corpo">
+
+        <div class="questao active">
+
+          <h4>Atualmente a urna é?</h4>
+
+          <div class="respostas">
+            <input type="radio" name="r1">
+            <span>Analógica</span>
+          </div>
+
+          <!-- Resposta Certa -->
+          <div class="respostas">
+            <input type="radio" name="r1" valido="valido">
+            <span>Eletrônica</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r1">
+            <span>De acrilico </span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r1">
+            <span>Funerária</span>
+          </div>
+        </div>
+
+        <div class="questao">
+          <h4>A urna eletrônica no Brasil serve para</h4>
+          <div class="respostas">
+            <input type="radio" name="r2">
+            <span>Guardar restos mortais</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r2">
+            <span>Guardar roupas e acessorios</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r2">
+            <span>Guardar dinheiro</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r2" valido="valido">
+            <span>Votar de forma segura</span>
+          </div>
+        </div>
+
+        <div class="questao">
+          <h4>Quantos módulos há na urna eletrônica?</h4>
+          <div class="respostas">
+            <input type="radio" name="r3">
+            <span>1</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r3" valido="valido">
+            <span>2</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r3">
+            <span>6</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r3">
+            <span>34</span>
+          </div>
+        </div>
+
+        <div class="questao">
+          <h4>Em que ano foi implantada a urna eletrônica no Brasil?</h4>
+          <div class="respostas">
+            <input type="radio" name="r4">
+            <span>1958</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r4" valido="valido">
+            <span>1996</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r4">
+            <span>1939</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r4">
+            <span>1945</span>
+          </div>
+        </div>
+
+        <div class="questao">
+          <h4>No seu ano de estreia, em quantas cidades do Brasil a urna atuou?</h4>
+          <div class="respostas">
+            <input type="radio" name="r5">
+            <span>56</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r5" valido="valido">
+            <span>57</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r5">
+            <span>52</span>
+          </div>
+
+          <div class="respostas">
+            <input type="radio" name="r5">
+            <span>20</span>
+          </div>
+        </div>
+
+        <div class="questao">
+          <h4>Sua pontuação total é <span id="total">0</span> de 100</h4>
+          <h4 class="text-center">Obrigado por partipar!</h4>
+        </div>
+
+      </div>
+
+      <div class="rodape">
+        <span class="btn1" id="pular">Pular</span>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- Links externos JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Link JS do Quiz -->
+  <script src="js/quiz.js"></script>
+</body>
+
+</html>
